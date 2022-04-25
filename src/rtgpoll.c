@@ -156,10 +156,6 @@ int main(int argc, char *argv[]) {
 			fatal("server not responding.\n");
     }
  #endif
-#else
- #if HAVE_MYSQL
-	my_init();
- #endif
 #endif
 
 
