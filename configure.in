@@ -85,7 +85,7 @@ AC_CHECK_LIB(z, deflate)
 dnl check for libtool
 AC_MSG_CHECKING(libtool)
 for i in /usr /usr/local; do
-	test -f $i/lib/x86_64-linux-gnu/libltdl.a -o -f $i/lib/libltdl.so && LT_LIBDIR=$i/lib/x86_64-linux-gnu/
+	test -f $i/lib/${host_cpu}-${host_os}/libltdl.a -o -f $i/lib/libltdl.so && LT_LIBDIR=$i/lib/${host_cpu}-${host_os}/
 	test -f $i/lib/libltdl.a -o -f $i/lib/libltdl.so && LT_LIBDIR=$i/lib
 	test -f $i/lib64/libltdl.a -o -f $i/lib64/libltdl.so && LT_LIBDIR=$i/lib64
 done
